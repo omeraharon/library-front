@@ -1,0 +1,48 @@
+
+.parallax {
+    background-image: url("../../../../assets/istockphoto-1263838232-170667a.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 500px;  
+    overflow: hidden;
+}
+
+.search {
+    width: 60%;
+    max-width: 700px;
+    margin: 150px auto;
+}
+
+.search > * {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    color: black;
+}
+
+.search > h3 {
+    color: #8d6b52;
+}
+
+.search > input {
+    border: 1px solid #f0d0bb;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(248, 248, 248, .5);
+    text-align: left;
+    outline: none;
+}
+
+.menu {
+    margin:auto;
+    width: 100%;
+}
+
+.cards {
+    width: 80%;
+    max-width: 1000px;
+    margin: auto;
+}

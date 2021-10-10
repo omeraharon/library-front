@@ -1,0 +1,26 @@
+form {
+    width: 300px;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+form > textarea {
+    display: block;
+    height: 150px;
+}
+
+input, label, textarea, select, button {
+    margin: 20px auto;
+	width: 100%;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+span {
+    display: block;
+    margin-bottom: 30px;
+    color: #bf2717;
+}

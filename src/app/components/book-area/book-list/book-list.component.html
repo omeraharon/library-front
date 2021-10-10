@@ -1,0 +1,19 @@
+<div>
+    <div class="parallax">
+        <div class="search">
+            <h3>All Books From All Genres...</h3>
+            <label>Search specific book:</label>
+            <input type="search" (input)="searchBook($event)"/>
+        </div>
+    </div>
+
+    <div class="menu">
+        <button *ngFor="let genre of genres" value={{genre.genreId}} (click)="getBooksByGenre($event)">{{genre.genreName}}</button>
+        <button (click)="getAllBooks()">All Books</button>
+    </div>
+
+    <div class="cards">
+        <span *ngIf="!books?.length">no results</span>
+        <app-book-card *ngFor="let book of books" [book]="book"></app-book-card>
+    </div>
+</div>

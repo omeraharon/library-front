@@ -1,0 +1,13 @@
+div {
+    width: 100%;
+    height: 250px;
+    background-color: rgb(31, 31, 31);
+}
+
+div > img {
+    padding-top: 10px;
+}
+
+div > h1 {
+    color: #ffffff;
+}

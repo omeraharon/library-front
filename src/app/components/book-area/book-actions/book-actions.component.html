@@ -1,0 +1,28 @@
+<div>
+
+    <form #myForm="ngForm" (submit)="send()">
+
+        <h3 *ngIf="!editStatus">Add Book:</h3>
+        <h3 *ngIf="editStatus">Edit Book:</h3>
+
+        <label>Book Name:</label>
+        <input #bookNameBox="ngModel" type="text" name="bookName" [(ngModel)]="book.bookName" required minlength="2">
+        <span *ngIf="bookNameBox.errors?.required && bookNameBox.touched">Missing book name.</span>
+        <span *ngIf="bookNameBox.errors?.minlength && bookNameBox.touched">book name must contain more than 2 letters.</span>
+
+        <label>Description:</label>
+        <textarea #descriptionBox="ngModel" type="text" name="description" [(ngModel)]="book.description" required minlength="5"></textarea>
+        <span *ngIf="descriptionBox.errors?.required && descriptionBox.touched">Missing description.</span>
+        <span *ngIf="descriptionBox.errors?.minlength && descriptionBox.touched">description must contain more than 5 letters.</span>
+
+        <label>Genre:</label>
+        <select #genreBox="ngModel" [(ngModel)]="book.genreId" name="genreId" required>
+            <option *ngFor="let genre of genres" value="{{genre.genreId}}">{{genre.genreName}}</option>
+        </select>
+        <span *ngIf="genreBox.errors?.required && genreBox.touched">Missing Genre</span>
+
+        <button [disabled]="myForm.form.invalid" *ngIf="editStatus">Edit Book</button>
+        <button [disabled]="myForm.form.invalid" *ngIf="!editStatus">Add Book</button>
+    </form>
+
+</div>

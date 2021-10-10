@@ -1,0 +1,8 @@
+<div>
+    <h3>{{book.bookName}}</h3>
+    <h5>{{book.genreName}}</h5>
+    <p>{{book.description}}</p>
+
+    <a routerLink="/book-actions" [state]="{ data: book }">📝</a>
+    <a [routerLink]="'/delete/' + book.uuid">Delete</a>
+</div>
